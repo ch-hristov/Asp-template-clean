@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,26 +17,7 @@ namespace AspCoreServer.Data
             {
                 return;   // DB has been seeded
             }
-            var users = new User[]
-            {
-               new User(){Name = "Mark Pieszak"},
-               new User(){Name = "Abrar Jahin"},
-               new User(){Name = "hakonamatata"},
-               new User(){Name = "LiverpoolOwen"},
-               new User(){Name = "Ketrex"},
-               new User(){Name = "markwhitfeld"},
-               new User(){Name = "daveo1001"},
-               new User(){Name = "paonath"},
-               new User(){Name = "nalex095"},
-               new User(){Name = "ORuban"},
-               new User(){Name = "Gaulomatic"},
-               new User(){Name = "GRIMMR3AP3R"}
-            };
 
-            foreach (User s in users)
-            {
-                context.User.Add(s);
-            }
             context.SaveChanges();
         }
     }

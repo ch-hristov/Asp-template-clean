@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg">
-  <a [routerLink]="['/home']" class='navbar-brand'>Angular 6 Universal & ASP.NET Core</a>
+  <a [routerLink]="['/home']" class='navbar-brand'>Gertara</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
     aria-label="Toggle navigation" (click)="collapseNavbar()">
     <i class="fas fa-bars"></i>
@@ -11,31 +11,6 @@
           <i class="fas fa-home"></i> {{ "HOME" | translate }}
         </a>
       </li>
-      <li class="nav-item" [routerLinkActive]="['link-active']" (click)="collapseMenu()">
-        <a class="nav-link" [routerLink]="['/counter']">
-          <i class="fas fa-graduation-cap"></i> {{ "COUNTER" | translate }}
-        </a>
-      </li>
-      <li class="nav-item" [routerLinkActive]="['link-active']" (click)="collapseMenu()">
-        <a class="nav-link" [routerLink]="['/users']">
-          <i class="fas fa-user"></i> Rest API Demo
-        </a>
-      </li>
-      <li class="nav-item" [routerLinkActive]="['link-active']" (click)="collapseMenu()">
-        <a class="nav-link angular" [routerLink]="['/ngx-bootstrap']">
-          <i class="fab fa-angular"></i> ngx-Bootstrap demo
-        </a>
-      </li>
-      <li class="nav-item" [routerLinkActive]="['link-active']" (click)="collapseMenu()">
-        <a class="nav-link" [routerLink]="['/lazy']">
-          <i class="far fa-star"></i> Lazy-loaded demo
-        </a>
-      </li>
-      <!-- <li class="nav-item" [routerLinkActive]="['link-active']" (click)="collapseMenu()">
-            <a class="nav-link" [routerLink]="['/chat']">
-              <span class="glyphicon glyphicon-comment"></span> Chat
-            </a>
-          </li> -->
     </ul>
   </div>
 </nav>

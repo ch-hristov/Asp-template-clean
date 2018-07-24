@@ -16,12 +16,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './containers/home/home.component';
-import { UsersComponent } from './containers/users/users.component';
-import { UserDetailComponent } from './components/user-detail/user-detail.component';
-import { CounterComponent } from './containers/counter/counter.component';
 import { NotFoundComponent } from './containers/not-found/not-found.component';
-import { NgxBootstrapComponent } from './containers/ngx-bootstrap-demo/ngx-bootstrap.component';
-
 import { LinkService } from './shared/link.service';
 import { UserService } from './shared/user.service';
 import { ORIGIN_URL } from '@nguniversal/aspnetcore-engine/tokens';
@@ -39,12 +34,8 @@ export function createTranslateLoader(http: HttpClient, baseHref) {
     declarations: [
         AppComponent,
         NavMenuComponent,
-        CounterComponent,
-        UsersComponent,
-        UserDetailComponent,
         HomeComponent,
-        NotFoundComponent,
-        NgxBootstrapComponent
+        NotFoundComponent
     ],
     imports: [
         CommonModule,
@@ -91,42 +82,6 @@ export function createTranslateLoader(http: HttpClient, baseHref) {
                     ]
                 }
             },
-            {
-                path: 'counter', component: CounterComponent,
-                data: {
-                    title: 'Counter',
-                    meta: [{ name: 'description', content: 'This is an Counter page Description!' }],
-                    links: [
-                        { rel: 'canonical', href: 'http://blogs.example.com/counter/something' },
-                        { rel: 'alternate', hreflang: 'es', href: 'http://es.example.com/counter' }
-                    ]
-                }
-            },
-            {
-                path: 'users', component: UsersComponent,
-                data: {
-                    title: 'Users REST example',
-                    meta: [{ name: 'description', content: 'This is User REST API example page Description!' }],
-                    links: [
-                        { rel: 'canonical', href: 'http://blogs.example.com/chat/something' },
-                        { rel: 'alternate', hreflang: 'es', href: 'http://es.example.com/users' }
-                    ]
-                }
-            },
-            {
-                path: 'ngx-bootstrap', component: NgxBootstrapComponent,
-                data: {
-                    title: 'Ngx-bootstrap demo!!',
-                    meta: [{ name: 'description', content: 'This is an Demo Bootstrap page Description!' }],
-                    links: [
-                        { rel: 'canonical', href: 'http://blogs.example.com/bootstrap/something' },
-                        { rel: 'alternate', hreflang: 'es', href: 'http://es.example.com/bootstrap-demo' }
-                    ]
-                }
-            },
-
-            { path: 'lazy', loadChildren: './containers/lazy/lazy.module#LazyModule'},
-
             {
                 path: '**', component: NotFoundComponent,
                 data: {
